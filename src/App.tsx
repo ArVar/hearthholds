@@ -244,8 +244,8 @@ export default function App() {
   }, [saveCurrentDocument]);
 
   useEffect(() => {
-    if (!hydrated || !dirty) return;
-    if (saveStatus !== "error") setSaveStatus("saving");
+    if (!hydrated || !dirty || saveStatus === "error") return;
+    setSaveStatus("saving");
     const timer = window.setTimeout(() => {
       void saveCurrentDocument();
     }, 450);
