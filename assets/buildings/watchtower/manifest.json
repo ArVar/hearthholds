@@ -1,0 +1,21 @@
+{
+  "label": { "de": "Wachturm", "en": "Watchtower" },
+  "footprintScale": { "x": 1.18, "y": 1.18 },
+  "variants": ["default"],
+  "upgradeTiers": ["base"],
+  "gameplay": {
+    "housingCapacity": 2,
+    "operation": { "minWorkers": 1, "maxWorkers": 4, "maxProduction": 0, "outputs": [] }
+  },
+  "palette": {
+    "order": 30,
+    "category": "buildings.defense",
+    "tags": [{ "de": "Turm Wache Schutz", "en": "tower guard defense" }],
+    "icon": "castle",
+    "width": 68,
+    "height": 68,
+    "shape": "rect",
+    "color": "#9b6c3e",
+    "subtitle": { "de": "Verteidigung", "en": "Defense" }
+  }
+}

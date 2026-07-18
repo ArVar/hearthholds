@@ -1,0 +1,18 @@
+{
+  "label": { "de": "Anwesen", "en": "Manor" },
+  "footprintScale": { "x": 1.18, "y": 1.18 },
+  "variants": ["default"],
+  "upgradeTiers": ["base"],
+  "gameplay": { "housingCapacity": 8 },
+  "palette": {
+    "order": 11,
+    "category": "buildings.housing",
+    "tags": [{ "de": "Anwesen Herrenhaus Wohnen", "en": "manor estate housing" }],
+    "icon": "home",
+    "width": 220,
+    "height": 140,
+    "shape": "rect",
+    "color": "#936b51",
+    "subtitle": { "de": "Großes Wohngebäude", "en": "Large residence" }
+  }
+}

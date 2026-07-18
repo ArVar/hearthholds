@@ -1,0 +1,18 @@
+{
+  "label": { "de": "Wohnhaus", "en": "Cottage" },
+  "footprintScale": { "x": 1.18, "y": 1.18 },
+  "variants": ["01", "02", "03"],
+  "upgradeTiers": ["base"],
+  "gameplay": { "housingCapacity": 5 },
+  "palette": {
+    "order": 10,
+    "category": "buildings.housing",
+    "tags": [{ "de": "Haus Wohnen Unterkunft", "en": "house home housing shelter" }],
+    "icon": "home",
+    "width": 110,
+    "height": 72,
+    "shape": "rect",
+    "color": "#b86542",
+    "subtitle": { "de": "Wohnen", "en": "Housing" }
+  }
+}

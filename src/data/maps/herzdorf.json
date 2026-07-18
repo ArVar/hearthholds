@@ -1,0 +1,1353 @@
+{
+  "schemaVersion": 16,
+  "id": "herzdorf",
+  "settlementName": "Herzdorf",
+  "ruleset": "D&D 5e · SRD 5.1",
+  "mode": "setup",
+  "campaignCycle": 0,
+  "population": {
+    "permanent": 30,
+    "named": 5,
+    "workingResidents": 20,
+    "temporaryLabel": "Tagelöhner aus Nachbarorten"
+  },
+  "treasury": {
+    "balanceBaseUnits": 10000,
+    "displayCurrencyId": "gp",
+    "defaultWagePerCycle": 0.1,
+    "defaultWageCurrencyId": "gp",
+    "recruitmentCostPerResident": 5,
+    "recruitmentCurrencyId": "gp",
+    "ledger": []
+  },
+  "map": {
+    "width": 1600,
+    "height": 1066.6666666666667,
+    "grid": {
+      "size": 20,
+      "distance": 1.5,
+      "unit": "m",
+      "majorEvery": 5,
+      "opacity": 0.2
+    },
+    "scene": {
+      "layers": [
+        {
+          "id": "background",
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "reference",
+          "visible": false,
+          "locked": false
+        },
+        {
+          "id": "terrain",
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "infrastructure",
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "buildings",
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "zones",
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "labels",
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "gm",
+          "visible": false,
+          "locked": false
+        }
+      ],
+      "objects": [],
+      "groups": [],
+      "objectOrder": []
+    },
+    "terrainStrokes": [
+      {
+        "id": "8bf33a36-02dc-45fe-bfc4-2d0e60fc3f40",
+        "type": "dirt",
+        "points": [
+          537.3529411764706,
+          381.6838235294118,
+          537.3529411764706,
+          381.6838235294118
+        ],
+        "width": 80
+      },
+      {
+        "id": "7b47c842-d1f3-4a9e-8785-cf8e34554e79",
+        "type": "dirt",
+        "points": [
+          537.3529411764706,
+          378.59558823529414,
+          537.3529411764706,
+          378.59558823529414
+        ],
+        "width": 160
+      },
+      {
+        "id": "bef54983-e251-48ed-adab-d55e5263989e",
+        "type": "dirt",
+        "points": [
+          540.4411764705883,
+          378.59558823529414,
+          540.4411764705883,
+          378.59558823529414
+        ],
+        "width": 160
+      },
+      {
+        "id": "68ecf3c0-eb1f-404a-a9f8-23c0224f4e45",
+        "type": "dirt",
+        "points": [
+          540.4411764705883,
+          378.59558823529414,
+          540.4411764705883,
+          378.59558823529414
+        ],
+        "width": 160
+      }
+    ],
+    "buildings": [
+      {
+        "id": "manor",
+        "name": "Detlevs Anwesen",
+        "type": "Anwesen",
+        "status": "existing",
+        "x": 700,
+        "y": 720,
+        "width": 220,
+        "height": 179.99999999999997,
+        "rotation": 0,
+        "shape": "rect",
+        "color": "#61784e",
+        "subtitle": "Detlev, Gundula & Kurt",
+        "notes": "Wohnsitz des Dorfchefs am südlichen Rand des Wohnviertels.",
+        "assetTypeId": "manor",
+        "upgradeTier": "base",
+        "housingCapacity": 8
+      },
+      {
+        "id": "farmhouse",
+        "name": "Bernds Bauernhof",
+        "type": "Bauernhof",
+        "status": "existing",
+        "x": 972.5,
+        "y": 314.33333333333337,
+        "width": 190,
+        "height": 108,
+        "rotation": 15,
+        "shape": "rect",
+        "color": "#b99a58",
+        "subtitle": "Bernd und Familie",
+        "notes": "15 Hühner, 5 Schweine und 2 Kühe. Die Tierweiden liegen östlich.",
+        "assetTypeId": "farmhouse",
+        "upgradeTier": "base",
+        "housingCapacity": 6,
+        "operation": {
+          "enabled": true,
+          "maxProduction": 10,
+          "incomePerCycle": 2,
+          "incomeCurrencyId": "gp",
+          "outputs": [
+            {
+              "resourceId": "grain",
+              "allocation": 1,
+              "carry": 0
+            }
+          ],
+          "workforce": {
+            "minWorkers": 2,
+            "maxWorkers": 6,
+            "residentWorkers": 2,
+            "hiredWorkers": 0,
+            "wagePerCycle": 1,
+            "wageCurrencyId": "gp"
+          }
+        }
+      },
+      {
+        "id": "carpentry",
+        "name": "Schreinerei",
+        "type": "Handwerk",
+        "status": "existing",
+        "x": 880,
+        "y": 540,
+        "width": 140,
+        "height": 125.51724137931033,
+        "rotation": 45,
+        "shape": "rect",
+        "color": "#9b6a43",
+        "subtitle": "Besetzung noch offen",
+        "notes": "Offene Werkstatt mit Holzlager nahe dem Wirtschaftsweg.",
+        "assetTypeId": "carpentry",
+        "upgradeTier": "base",
+        "housingCapacity": 4,
+        "operation": {
+          "enabled": true,
+          "maxProduction": 0,
+          "incomePerCycle": 0,
+          "incomeCurrencyId": "gp",
+          "outputs": [],
+          "workforce": {
+            "minWorkers": 1,
+            "maxWorkers": 3,
+            "residentWorkers": 1,
+            "hiredWorkers": 0,
+            "wagePerCycle": 1,
+            "wageCurrencyId": "gp"
+          }
+        }
+      },
+      {
+        "id": "hunting-lodge",
+        "name": "Olafs Jägerhaus",
+        "type": "Jagd & Gerberei",
+        "status": "existing",
+        "x": 680,
+        "y": 200,
+        "width": 140,
+        "height": 130,
+        "rotation": 30,
+        "shape": "rect",
+        "color": "#527259",
+        "subtitle": "Olaf · Jäger & Gerber",
+        "notes": "Jägerhaus mit überdachter Gerberstation und Trockengestell.",
+        "assetTypeId": "hunting-lodge",
+        "upgradeTier": "base",
+        "housingCapacity": 4,
+        "operation": {
+          "enabled": true,
+          "maxProduction": 0,
+          "incomePerCycle": 0,
+          "incomeCurrencyId": "gp",
+          "outputs": [],
+          "workforce": {
+            "minWorkers": 1,
+            "maxWorkers": 4,
+            "residentWorkers": 1,
+            "hiredWorkers": 0,
+            "wagePerCycle": 1,
+            "wageCurrencyId": "gp"
+          }
+        }
+      },
+      {
+        "id": "watchtower",
+        "name": "Wachturm",
+        "type": "Verteidigung",
+        "status": "existing",
+        "x": 940,
+        "y": 760,
+        "width": 80,
+        "height": 80,
+        "rotation": 330,
+        "shape": "rect",
+        "color": "#9a6a3d",
+        "subtitle": "Am Haupttor",
+        "notes": "Hölzerner Wachturm zwischen Haupttor und Flussbrücke.",
+        "assetTypeId": "watchtower",
+        "upgradeTier": "base",
+        "housingCapacity": 2,
+        "operation": {
+          "enabled": true,
+          "maxProduction": 0,
+          "incomePerCycle": 0,
+          "incomeCurrencyId": "gp",
+          "outputs": [],
+          "workforce": {
+            "minWorkers": 1,
+            "maxWorkers": 4,
+            "residentWorkers": 0,
+            "hiredWorkers": 0,
+            "wagePerCycle": 1,
+            "wageCurrencyId": "gp"
+          }
+        }
+      },
+      {
+        "id": "forge",
+        "name": "Dorfschmiede",
+        "type": "Schmiede",
+        "status": "construction",
+        "x": 1060,
+        "y": 580,
+        "width": 160,
+        "height": 116.19047619047619,
+        "rotation": 45,
+        "shape": "rect",
+        "color": "#89756c",
+        "subtitle": "Mauerwerk · 36%",
+        "notes": "Fundament fertig. Für die Inbetriebnahme fehlt ein Schmied.",
+        "assetTypeId": "forge",
+        "upgradeTier": "base",
+        "housingCapacity": 4,
+        "operation": {
+          "enabled": true,
+          "maxProduction": 0,
+          "incomePerCycle": 0,
+          "incomeCurrencyId": "gp",
+          "outputs": [],
+          "workforce": {
+            "minWorkers": 1,
+            "maxWorkers": 4,
+            "residentWorkers": 0,
+            "hiredWorkers": 0,
+            "wagePerCycle": 1,
+            "wageCurrencyId": "gp"
+          }
+        }
+      },
+      {
+        "id": "northwest-home",
+        "name": "Wohnhaus am Waldrand",
+        "type": "Wohnhaus",
+        "status": "existing",
+        "x": 380,
+        "y": 300,
+        "width": 120,
+        "height": 78.09523809523809,
+        "rotation": 315,
+        "shape": "rect",
+        "color": "#b86542",
+        "subtitle": "Teil der Grundversorgung",
+        "notes": "Vereinfachter Haushalt ohne einzeln erfasste Bewohner.",
+        "assetTypeId": "cottage",
+        "visualVariant": "01",
+        "upgradeTier": "base",
+        "housingCapacity": 5
+      },
+      {
+        "id": "north-home",
+        "name": "Haus am Nordweg",
+        "type": "Wohnhaus",
+        "status": "existing",
+        "x": 500,
+        "y": 220,
+        "width": 94,
+        "height": 92,
+        "rotation": 0,
+        "shape": "rect",
+        "color": "#a9563f",
+        "subtitle": "Teil der Grundversorgung",
+        "notes": "Vereinfachter Haushalt ohne einzeln erfasste Bewohner.",
+        "assetTypeId": "cottage",
+        "visualVariant": "02",
+        "upgradeTier": "base",
+        "housingCapacity": 5
+      },
+      {
+        "id": "community-house",
+        "name": "Gemeinschaftshaus",
+        "type": "Versorgung",
+        "status": "existing",
+        "x": 380,
+        "y": 460,
+        "width": 140,
+        "height": 83.24324324324324,
+        "rotation": 270,
+        "shape": "rect",
+        "color": "#a77b4b",
+        "subtitle": "Treffpunkt & Lager",
+        "notes": "Gemeinschaftlich genutztes Gebäude im nördlichen Wohnviertel.",
+        "assetTypeId": "community-hall",
+        "upgradeTier": "base",
+        "housingCapacity": 7,
+        "operation": {
+          "enabled": true,
+          "maxProduction": 0,
+          "incomePerCycle": 0,
+          "incomeCurrencyId": "gp",
+          "outputs": [],
+          "workforce": {
+            "minWorkers": 1,
+            "maxWorkers": 3,
+            "residentWorkers": 1,
+            "hiredWorkers": 0,
+            "wagePerCycle": 1,
+            "wageCurrencyId": "gp"
+          }
+        }
+      },
+      {
+        "id": "plaza-home",
+        "name": "Haus am Dorfplatz",
+        "type": "Wohnhaus",
+        "status": "existing",
+        "x": 660,
+        "y": 520,
+        "width": 100,
+        "height": 70.37037037037037,
+        "rotation": 195,
+        "shape": "rect",
+        "color": "#b45e42",
+        "subtitle": "Teil der Grundversorgung",
+        "notes": "Vereinfachter Haushalt am zentralen Platz.",
+        "assetTypeId": "cottage",
+        "visualVariant": "03",
+        "upgradeTier": "base",
+        "housingCapacity": 5
+      },
+      {
+        "id": "supply-house",
+        "name": "Vorratshaus",
+        "type": "Versorgung",
+        "status": "existing",
+        "x": 720,
+        "y": 360,
+        "width": 120,
+        "height": 109.56521739130434,
+        "rotation": 285,
+        "shape": "rect",
+        "color": "#8e6047",
+        "subtitle": "Gemeinsamer Siedlungsbestand",
+        "notes": "Lagert gemeinschaftliche Vorräte und Werkzeuge.",
+        "assetTypeId": "storehouse",
+        "upgradeTier": "base",
+        "housingCapacity": 2,
+        "operation": {
+          "enabled": true,
+          "maxProduction": 0,
+          "incomePerCycle": 0,
+          "incomeCurrencyId": "gp",
+          "outputs": [],
+          "workforce": {
+            "minWorkers": 1,
+            "maxWorkers": 3,
+            "residentWorkers": 0,
+            "hiredWorkers": 0,
+            "wagePerCycle": 1,
+            "wageCurrencyId": "gp"
+          }
+        }
+      }
+    ],
+    "palisades": [
+      {
+        "id": "heart-palisade",
+        "name": "Herzdorfer Palisade",
+        "status": "existing",
+        "center": {
+          "x": 797.5,
+          "y": 529.3333333333334
+        },
+        "rotation": 0,
+        "thickness": 12,
+        "style": "palisade",
+        "segments": [
+          {
+            "kind": "bezier",
+            "from": {
+              "x": 20,
+              "y": -300
+            },
+            "to": {
+              "x": -395,
+              "y": -425.00000000000006
+            },
+            "handleFrom": {
+              "x": -60.08128872546507,
+              "y": -449.11688245431424
+            },
+            "handleTo": {
+              "x": -245.88311754568574,
+              "y": -505.08128872546513
+            },
+            "fromMode": "corner",
+            "toMode": "smooth"
+          },
+          {
+            "kind": "bezier",
+            "from": {
+              "x": -395,
+              "y": -425.00000000000006
+            },
+            "to": {
+              "x": -520,
+              "y": -10.000000000000028
+            },
+            "handleFrom": {
+              "x": -544.1168824543142,
+              "y": -344.918711274535
+            },
+            "handleTo": {
+              "x": -577.6048463093022,
+              "y": -142.49114651139487
+            },
+            "fromMode": "smooth",
+            "toMode": "smooth"
+          },
+          {
+            "kind": "bezier",
+            "from": {
+              "x": -520,
+              "y": -10
+            },
+            "to": {
+              "x": -20,
+              "y": 360
+            },
+            "handleFrom": {
+              "x": -420,
+              "y": 220
+            },
+            "handleTo": {
+              "x": -220,
+              "y": 260
+            },
+            "fromMode": "smooth",
+            "toMode": "corner"
+          },
+          {
+            "kind": "bezier",
+            "from": {
+              "x": -20,
+              "y": 360
+            },
+            "to": {
+              "x": 430,
+              "y": 50
+            },
+            "handleFrom": {
+              "x": 140,
+              "y": 260
+            },
+            "handleTo": {
+              "x": 335.2928692598766,
+              "y": 205.590286215917
+            },
+            "fromMode": "corner",
+            "toMode": "smooth"
+          },
+          {
+            "kind": "bezier",
+            "from": {
+              "x": 430,
+              "y": 50
+            },
+            "to": {
+              "x": 400,
+              "y": -330
+            },
+            "handleFrom": {
+              "x": 496.06487001280203,
+              "y": -58.53514359246047
+            },
+            "handleTo": {
+              "x": 513.2183737153126,
+              "y": -233.35016877961115
+            },
+            "fromMode": "smooth",
+            "toMode": "smooth"
+          },
+          {
+            "kind": "bezier",
+            "from": {
+              "x": 400,
+              "y": -330
+            },
+            "to": {
+              "x": 20.00000000000003,
+              "y": -300
+            },
+            "handleFrom": {
+              "x": 286.7816262846874,
+              "y": -426.6498312203888
+            },
+            "handleTo": {
+              "x": 116.64983122038888,
+              "y": -413.2183737153126
+            },
+            "fromMode": "smooth",
+            "toMode": "corner"
+          }
+        ],
+        "gates": [],
+        "notes": "Asymmetrische Herzpalisade mit größerem Wohn- und kleinerem Wirtschaftsteil."
+      }
+    ],
+    "gates": [
+      {
+        "id": "main-gate",
+        "name": "Haupttor",
+        "position": {
+          "x": 1019.9999999999995,
+          "y": 759.9999999999998
+        },
+        "rotation": 330,
+        "width": 47.99999999999996,
+        "kind": "main",
+        "style": "palisade",
+        "notes": ""
+      },
+      {
+        "id": "north-gate",
+        "name": "Nordtor",
+        "position": {
+          "x": 820,
+          "y": 220
+        },
+        "rotation": 0,
+        "width": 32,
+        "kind": "service",
+        "style": "palisade",
+        "notes": ""
+      }
+    ],
+    "zones": [
+      {
+        "id": "wheat-field",
+        "name": "Kleines Weizenfeld",
+        "type": "field",
+        "x": 1060,
+        "y": 220,
+        "width": 174,
+        "height": 96,
+        "rotation": 15,
+        "color": "#d0a83f"
+      },
+      {
+        "id": "animal-pen",
+        "name": "Tierweiden",
+        "type": "property",
+        "x": 1067.5,
+        "y": 404.33333333333337,
+        "width": 258,
+        "height": 148,
+        "rotation": 0,
+        "color": "#8b6a48"
+      },
+      {
+        "id": "north-forest",
+        "name": "Holzgebiet",
+        "type": "forest",
+        "x": 560,
+        "y": 20,
+        "width": 760,
+        "height": 140,
+        "rotation": 0,
+        "color": "#396a4d",
+        "density": 1
+      },
+      {
+        "id": "west-forest",
+        "name": "Westlicher Wald",
+        "type": "forest",
+        "x": 140,
+        "y": 340,
+        "width": 160,
+        "height": 640,
+        "rotation": 0,
+        "color": "#355f45",
+        "density": 1
+      },
+      {
+        "id": "south-forest",
+        "name": "Südlicher Waldrand",
+        "type": "forest",
+        "x": 280,
+        "y": 940,
+        "width": 600,
+        "height": 360,
+        "rotation": 30,
+        "color": "#416d4c",
+        "density": 1
+      },
+      {
+        "id": "east-forest",
+        "name": "Östlicher Waldrand",
+        "type": "forest",
+        "x": 1560,
+        "y": 220,
+        "width": 105,
+        "height": 490,
+        "rotation": 0,
+        "color": "#355f45",
+        "density": 1
+      }
+    ],
+    "paths": [
+      {
+        "id": "river",
+        "name": "Fluss",
+        "kind": "river",
+        "points": [
+          1320,
+          -20,
+          1360,
+          300,
+          1327.5,
+          619.3333333333334,
+          1140,
+          1100
+        ],
+        "width": 100,
+        "color": "#4a94ad",
+        "anchors": [
+          {
+            "x": 1320,
+            "y": -20,
+            "mode": "smooth",
+            "handleOut": {
+              "x": 1318.3333333333333,
+              "y": 50
+            }
+          },
+          {
+            "x": 1360,
+            "y": 300,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 1350.9566530656766,
+              "y": 237.79941864684972
+            },
+            "handleOut": {
+              "x": 1382.1078431372553,
+              "y": 452.05882352941177
+            }
+          },
+          {
+            "x": 1327.5,
+            "y": 619.3333333333334,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 1350,
+              "y": 567.6666666666667
+            },
+            "handleOut": {
+              "x": 1305,
+              "y": 671
+            }
+          },
+          {
+            "x": 1140,
+            "y": 1100,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 1160.049019607843,
+              "y": 1023.0147058823529
+            }
+          }
+        ]
+      },
+      {
+        "id": "main-road",
+        "name": "Hauptweg",
+        "kind": "road",
+        "points": [
+          1620,
+          960,
+          1297.5,
+          829.3333333333334,
+          1020,
+          760,
+          877.5,
+          649.3333333333334,
+          747.5,
+          499.33333333333337
+        ],
+        "width": 20,
+        "color": "#b79b72",
+        "anchors": [
+          {
+            "x": 1620,
+            "y": 960,
+            "mode": "smooth",
+            "handleOut": {
+              "x": 1563.3333333333333,
+              "y": 933.3333333333334
+            }
+          },
+          {
+            "x": 1297.5,
+            "y": 829.3333333333334,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 1376.4234192152871,
+              "y": 844.5943770369468
+            },
+            "handleOut": {
+              "x": 1215.4901960784316,
+              "y": 813.4754901960787
+            }
+          },
+          {
+            "x": 1020,
+            "y": 760,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 1085.8937683509048,
+              "y": 798.1839140544474
+            },
+            "handleOut": {
+              "x": 946.9117647058828,
+              "y": 717.6470588235302
+            }
+          },
+          {
+            "x": 877.5,
+            "y": 649.3333333333334,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 921.6666666666666,
+              "y": 691
+            },
+            "handleOut": {
+              "x": 833.3333333333334,
+              "y": 607.6666666666667
+            }
+          },
+          {
+            "x": 747.5,
+            "y": 499.33333333333337,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 790.8333333333334,
+              "y": 549.3333333333334
+            }
+          }
+        ]
+      },
+      {
+        "id": "north-road",
+        "name": "Versorgungsweg",
+        "kind": "road",
+        "points": [
+          840,
+          -40,
+          817.5,
+          229.33333333333337,
+          782.5,
+          389.33333333333337,
+          747.5,
+          499.33333333333337
+        ],
+        "width": 14,
+        "color": "#a58b68",
+        "anchors": [
+          {
+            "x": 840,
+            "y": -40,
+            "mode": "smooth",
+            "handleOut": {
+              "x": 840,
+              "y": -6.666666666666686
+            }
+          },
+          {
+            "x": 817.5,
+            "y": 229.33333333333337,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 823.3333333333334,
+              "y": 186.00000000000003
+            },
+            "handleOut": {
+              "x": 811.6666666666666,
+              "y": 272.6666666666667
+            }
+          },
+          {
+            "x": 782.5,
+            "y": 389.33333333333337,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 794.1666666666666,
+              "y": 344.33333333333337
+            },
+            "handleOut": {
+              "x": 770.8333333333334,
+              "y": 434.33333333333337
+            }
+          },
+          {
+            "x": 747.5,
+            "y": 499.33333333333337,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 759.1666666666666,
+              "y": 462.6666666666667
+            }
+          }
+        ]
+      },
+      {
+        "id": "west-road",
+        "name": "Wohnweg",
+        "kind": "road",
+        "points": [
+          747.5,
+          499.33333333333337,
+          627.5,
+          469.33333333333337,
+          527.5,
+          529.3333333333334,
+          452.5,
+          619.3333333333334
+        ],
+        "width": 14,
+        "color": "#aa906d"
+      },
+      {
+        "id": "farm-road",
+        "name": "Hofweg",
+        "kind": "road",
+        "points": [
+          747.5,
+          499.33333333333337,
+          852.5,
+          439.33333333333337,
+          972.5,
+          339.33333333333337
+        ],
+        "width": 13,
+        "color": "#aa906d"
+      },
+      {
+        "id": "bridge",
+        "name": "Flussbrücke",
+        "kind": "bridge",
+        "points": [
+          1160,
+          800,
+          1320,
+          840
+        ],
+        "width": 60,
+        "color": "#8b5d38",
+        "anchors": [
+          {
+            "x": 1160,
+            "y": 800,
+            "mode": "corner"
+          },
+          {
+            "x": 1320,
+            "y": 840,
+            "mode": "corner"
+          }
+        ]
+      },
+      {
+        "id": "a3461611-4f3e-43d2-a35b-93630c3a7caf",
+        "name": "Neuer Weg",
+        "kind": "road",
+        "points": [
+          700,
+          820,
+          840,
+          800,
+          958.6764705882354,
+          726.2009803921569
+        ],
+        "width": 14,
+        "color": "#aa906d",
+        "notes": "",
+        "anchors": [
+          {
+            "x": 700,
+            "y": 820,
+            "mode": "smooth",
+            "handleOut": {
+              "x": 733.3333333333333,
+              "y": 820
+            }
+          },
+          {
+            "x": 840,
+            "y": 800,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 796.8872549019608,
+              "y": 815.6331699346405
+            },
+            "handleOut": {
+              "x": 883.1127450980392,
+              "y": 784.3668300653595
+            }
+          },
+          {
+            "x": 958.6764705882354,
+            "y": 726.2009803921569,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 925.3431372549019,
+              "y": 712.8676470588235
+            }
+          }
+        ]
+      },
+      {
+        "id": "76682902-7ef6-4ac7-a49c-ae68c61565c0",
+        "name": "Neuer Weg",
+        "kind": "road",
+        "points": [
+          460,
+          600,
+          546.764705882353,
+          303.2598039215687,
+          620,
+          458.45588235294116
+        ],
+        "width": 14,
+        "color": "#aa906d",
+        "notes": "",
+        "anchors": [
+          {
+            "x": 460,
+            "y": 600,
+            "mode": "smooth",
+            "handleOut": {
+              "x": 422.3039215686277,
+              "y": 419.3382352941179
+            }
+          },
+          {
+            "x": 546.764705882353,
+            "y": 303.2598039215687,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 448.6696956540564,
+              "y": 308.2260175890626
+            },
+            "handleOut": {
+              "x": 625.5256870889201,
+              "y": 299.2724057815106
+            }
+          },
+          {
+            "x": 620,
+            "y": 458.45588235294116,
+            "mode": "smooth",
+            "handleIn": {
+              "x": 642.2549019607843,
+              "y": 404.9754901960785
+            }
+          }
+        ]
+      }
+    ],
+    "markers": [
+      {
+        "id": "village-well",
+        "name": "Dorfbrunnen",
+        "type": "well",
+        "position": {
+          "x": 500,
+          "y": 480
+        },
+        "width": 88,
+        "height": 66
+      },
+      {
+        "id": "village-fire",
+        "name": "Feuerstelle",
+        "type": "fire",
+        "position": {
+          "x": 540,
+          "y": 380
+        },
+        "width": 68,
+        "height": 68
+      }
+    ],
+    "decorations": [
+      {
+        "id": "pasture-supplies",
+        "name": "Weidebedarf",
+        "assetId": "environment/prop/pasture",
+        "position": {
+          "x": 1132.5,
+          "y": 404.33333333333337
+        },
+        "width": 132,
+        "height": 98,
+        "rotation": 0
+      },
+      {
+        "id": "village-utility",
+        "name": "Dorfbedarf",
+        "assetId": "environment/prop/village-utility",
+        "position": {
+          "x": 560,
+          "y": 560
+        },
+        "width": 116,
+        "height": 87,
+        "rotation": 345
+      },
+      {
+        "id": "1fc7e732-0f1c-4d9b-960e-d21e348e77ee",
+        "name": "Neuer Langholzstapel",
+        "assetId": "environment/prop/timber-stack",
+        "position": {
+          "x": 920,
+          "y": 100
+        },
+        "width": 140,
+        "height": 70,
+        "rotation": 330
+      }
+    ]
+  },
+  "resources": [
+    {
+      "id": "wood",
+      "name": "Holz",
+      "total": 34,
+      "reserved": 4,
+      "unit": "Einheiten",
+      "source": "Umliegender Wald · 2 Arbeiter",
+      "consumable": true
+    },
+    {
+      "id": "stone",
+      "name": "Stein",
+      "total": 22,
+      "reserved": 12,
+      "unit": "Einheiten",
+      "source": "Befreiter Steinbruch · 30 Min.",
+      "consumable": true
+    },
+    {
+      "id": "ironOre",
+      "name": "Eisenerz",
+      "total": 0,
+      "reserved": 0,
+      "unit": "Einheiten",
+      "source": "",
+      "consumable": true
+    },
+    {
+      "id": "grain",
+      "name": "Getreide",
+      "total": 0,
+      "reserved": 0,
+      "unit": "Einheiten",
+      "source": "",
+      "consumable": true
+    },
+    {
+      "id": "hops",
+      "name": "Hopfen",
+      "total": 0,
+      "reserved": 0,
+      "unit": "Einheiten",
+      "source": "",
+      "consumable": true
+    }
+  ],
+  "resourceSources": [
+    {
+      "id": "legacy-wood-source",
+      "name": "Umliegender Wald",
+      "type": "forest",
+      "resourceId": "wood",
+      "enabled": true,
+      "maxProduction": 8,
+      "workforce": {
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "residentWorkers": 2,
+        "hiredWorkers": 0,
+        "wagePerCycle": 1,
+        "wageCurrencyId": "gp"
+      },
+      "travelTime": "20 Min.",
+      "transportCapacity": 8,
+      "notes": ""
+    },
+    {
+      "id": "legacy-stone-source",
+      "name": "Befreiter Steinbruch",
+      "type": "quarry",
+      "resourceId": "stone",
+      "enabled": true,
+      "maxProduction": 6,
+      "workforce": {
+        "minWorkers": 2,
+        "maxWorkers": 5,
+        "residentWorkers": 3,
+        "hiredWorkers": 0,
+        "wagePerCycle": 1,
+        "wageCurrencyId": "gp"
+      },
+      "travelTime": "30 Min.",
+      "transportCapacity": 6,
+      "notes": ""
+    },
+    {
+      "id": "4ca4f770-bac6-40f2-aa59-fdb5879a171f",
+      "name": "Eisenerzmine",
+      "type": "ironMine",
+      "resourceId": "ironOre",
+      "enabled": true,
+      "maxProduction": 4,
+      "workforce": {
+        "minWorkers": 2,
+        "maxWorkers": 6,
+        "residentWorkers": 4,
+        "hiredWorkers": 0,
+        "wagePerCycle": 1,
+        "wageCurrencyId": "gp"
+      },
+      "travelTime": "45 Min.",
+      "transportCapacity": 4,
+      "notes": ""
+    }
+  ],
+  "buildPlans": [
+    {
+      "id": "standard-building",
+      "name": "Standardbauplan",
+      "buildingType": "*",
+      "phases": {
+        "foundation": {
+          "name": "Fundament",
+          "description": "Baugrund vorbereiten und ein tragfähiges Fundament anlegen.",
+          "requirements": [
+            {
+              "resourceId": "wood",
+              "amount": 2
+            },
+            {
+              "resourceId": "stone",
+              "amount": 4
+            }
+          ],
+          "workersRequired": 2,
+          "prerequisites": []
+        },
+        "masonry": {
+          "name": "Mauerwerk",
+          "description": "Tragende Wände, Stützen und Öffnungen errichten.",
+          "requirements": [
+            {
+              "resourceId": "wood",
+              "amount": 5
+            },
+            {
+              "resourceId": "stone",
+              "amount": 8
+            }
+          ],
+          "workersRequired": 3,
+          "prerequisites": []
+        },
+        "completion": {
+          "name": "Dach & Fertigstellung",
+          "description": "Dach schließen und das Gebäude gebrauchsfertig ausbauen.",
+          "requirements": [
+            {
+              "resourceId": "wood",
+              "amount": 12
+            },
+            {
+              "resourceId": "stone",
+              "amount": 2
+            }
+          ],
+          "workersRequired": 3,
+          "prerequisites": []
+        }
+      }
+    },
+    {
+      "id": "simple-forge",
+      "name": "Einfache Dorfschmiede",
+      "buildingType": "forge",
+      "phases": {
+        "foundation": {
+          "name": "Fundament",
+          "description": "Tragfähiges Steinbett und Sockel für Esse und Außenwände.",
+          "requirements": [
+            {
+              "resourceId": "wood",
+              "amount": 2
+            },
+            {
+              "resourceId": "stone",
+              "amount": 6
+            }
+          ],
+          "workersRequired": 3,
+          "prerequisites": []
+        },
+        "masonry": {
+          "name": "Mauerwerk",
+          "description": "Außenwände und feuerfester Bereich der Esse.",
+          "requirements": [
+            {
+              "resourceId": "wood",
+              "amount": 4
+            },
+            {
+              "resourceId": "stone",
+              "amount": 12
+            }
+          ],
+          "workersRequired": 4,
+          "prerequisites": []
+        },
+        "completion": {
+          "name": "Dach & Fertigstellung",
+          "description": "Dachstuhl, Deckung, Rauchabzug und betriebsbereite Grundausstattung.",
+          "requirements": [
+            {
+              "resourceId": "wood",
+              "amount": 16
+            },
+            {
+              "resourceId": "stone",
+              "amount": 4
+            }
+          ],
+          "workersRequired": 4,
+          "prerequisites": [
+            {
+              "id": "smith-available",
+              "label": "Schmied verfügbar"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "forge-project",
+      "name": "Dorfschmiede errichten",
+      "buildingId": "forge",
+      "buildPlanId": "simple-forge",
+      "status": "active",
+      "currentStage": "masonry",
+      "phaseProgress": 36,
+      "resourcesReserved": true,
+      "workforce": {
+        "minWorkers": 4,
+        "maxWorkers": 8,
+        "residentWorkers": 4,
+        "hiredWorkers": 0,
+        "wagePerCycle": 1,
+        "wageCurrencyId": "gp"
+      },
+      "fulfilledPrerequisiteIds": []
+    }
+  ],
+  "updatedAt": "2026-07-18T09:47:43.698Z"
+}

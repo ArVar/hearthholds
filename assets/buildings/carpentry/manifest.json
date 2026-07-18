@@ -1,0 +1,21 @@
+{
+  "label": { "de": "Schreinerei", "en": "Carpentry" },
+  "footprintScale": { "x": 1.18, "y": 1.18 },
+  "variants": ["default"],
+  "upgradeTiers": ["base", "extended", "master"],
+  "gameplay": {
+    "housingCapacity": 4,
+    "operation": { "minWorkers": 1, "maxWorkers": 3, "maxProduction": 0, "outputs": [] }
+  },
+  "palette": {
+    "order": 20,
+    "category": "buildings.craft",
+    "tags": [{ "de": "Handwerk Holz Werkstatt", "en": "craft wood workshop" }],
+    "icon": "hammer",
+    "width": 126,
+    "height": 82,
+    "shape": "rect",
+    "color": "#98633f",
+    "subtitle": { "de": "2 Arbeitsplätze", "en": "2 workstations" }
+  }
+}

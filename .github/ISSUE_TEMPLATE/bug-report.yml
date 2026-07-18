@@ -1,0 +1,53 @@
+name: Fehler melden
+description: Einen reproduzierbaren Fehler in Hearthholds melden
+title: "[Fehler]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke fürs Testen. Bitte keine vertraulichen Kampagnendaten oder unbereinigten Hearthholds-Exporte anhängen.
+  - type: input
+    id: version
+    attributes:
+      label: Hearthholds-Version
+      description: Steht unter Einstellungen → Über Hearthholds.
+      placeholder: 0.1.0-alpha.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser und Betriebssystem
+      placeholder: Chrome 140, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Nachstellen
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Tatsächliches Verhalten
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Datenschutz
+      options:
+        - label: Ich habe Anhänge und Screenshots auf private Kampagnendaten geprüft.
+          required: true

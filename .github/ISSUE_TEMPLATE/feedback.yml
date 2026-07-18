@@ -1,0 +1,31 @@
+name: Feedback oder Idee
+description: Erfahrungen aus dem Friends-&-Family-Test teilen
+title: "[Feedback]: "
+labels: [feedback]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Bereich
+      options:
+        - Bedienung und Einstieg
+        - Karte und Gebäude
+        - Bevölkerung und Arbeitskräfte
+        - Ressourcen und Schatzkammer
+        - Installation und Offline-Nutzung
+        - Dokumentation
+        - Sonstiges
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Beobachtung oder Wunsch
+      description: Was wolltest du erreichen, und was würde dir dabei helfen?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Kontext
+      description: Optional – Browser, Gerät oder Spielsituation. Bitte keine vertraulichen Kampagnendaten teilen.

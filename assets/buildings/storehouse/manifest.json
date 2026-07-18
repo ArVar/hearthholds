@@ -1,0 +1,21 @@
+{
+  "label": { "de": "Vorratshaus", "en": "Storehouse" },
+  "footprintScale": { "x": 1.18, "y": 1.18 },
+  "variants": ["default"],
+  "upgradeTiers": ["base"],
+  "gameplay": {
+    "housingCapacity": 2,
+    "operation": { "minWorkers": 1, "maxWorkers": 3, "maxProduction": 0, "outputs": [] }
+  },
+  "palette": {
+    "order": 41,
+    "category": "buildings.supply",
+    "tags": [{ "de": "Lager Vorrat Speicher", "en": "storage supplies warehouse" }],
+    "icon": "sprout",
+    "width": 126,
+    "height": 82,
+    "shape": "rect",
+    "color": "#80644b",
+    "subtitle": { "de": "Lagerung", "en": "Storage" }
+  }
+}

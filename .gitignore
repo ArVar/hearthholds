@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+src-tauri/target/
+*.tsbuildinfo
+*.log
+*.local
+.env.local
+.env.*.local
+.idea/
+.DS_Store
+Thumbs.db
+assets/.example_style/
+tmp/

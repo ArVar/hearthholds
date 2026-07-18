@@ -1,0 +1,38 @@
+{
+  "label": { "de": "Bauernhof", "en": "Farmhouse" },
+  "footprintScale": { "x": 1.18, "y": 1.18 },
+  "variants": ["default"],
+  "upgradeTiers": ["base", "extended"],
+  "gameplay": {
+    "housingCapacity": 6,
+    "operation": {
+      "minWorkers": 2,
+      "maxWorkers": 6,
+      "maxProduction": 10,
+      "incomePerCycle": 2,
+      "incomeCurrencyId": "gp",
+      "outputs": [{ "resourceId": "grain", "allocation": 1 }],
+      "tierOverrides": {
+        "extended": {
+          "maxWorkers": 9,
+          "maxProduction": 16,
+          "outputs": [
+            { "resourceId": "grain", "allocation": 0.75 },
+            { "resourceId": "hops", "allocation": 0.25 }
+          ]
+        }
+      }
+    }
+  },
+  "palette": {
+    "order": 40,
+    "category": "buildings.supply",
+    "tags": [{ "de": "Hof Getreide Hopfen Landwirtschaft", "en": "farm grain hops agriculture" }],
+    "icon": "sprout",
+    "width": 156,
+    "height": 96,
+    "shape": "rect",
+    "color": "#b99a58",
+    "subtitle": { "de": "Grundversorgung", "en": "Basic supplies" }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "label": { "de": "Gemeinschaftshaus", "en": "Community hall" },
+  "footprintScale": { "x": 1.18, "y": 1.18 },
+  "variants": ["default"],
+  "upgradeTiers": ["base"],
+  "gameplay": {
+    "housingCapacity": 2,
+    "operation": { "minWorkers": 1, "maxWorkers": 3, "maxProduction": 0, "outputs": [] }
+  },
+  "palette": {
+    "order": 50,
+    "category": "buildings.community",
+    "tags": [{ "de": "Gemeinschaft Versammlung Treffpunkt", "en": "community meeting gathering" }],
+    "icon": "home",
+    "width": 154,
+    "height": 92,
+    "shape": "rect",
+    "color": "#8b6650",
+    "subtitle": { "de": "Versammlung", "en": "Gathering place" }
+  }
+}
