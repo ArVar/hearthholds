@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@flatten-js/core": "^1.6.12",
-    "@radix-ui/react-tooltip": "^1.2.12",
+    "@radix-ui/react-tooltip": "^1.2.16",
     "dexie": "^4.4.4",
     "immer": "^11.1.15",
     "konva": "^10.3.0",
